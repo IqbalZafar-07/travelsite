@@ -1,0 +1,72 @@
+.profile {
+}
+.profile-background-image img {
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+}
+
+.profile-info {
+  padding-top: 10px;
+  height: 130px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  display: flex;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: -144px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-info div h1 {
+  margin-bottom: -20px;
+}
+
+.profile-info div {
+  margin-bottom: -10px;
+}
+
+.profile-info-basic-highlights {
+  margin-top: -20px;
+}
+
+.profile-info-basic-highlights div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-right: 20px;
+}
+
+.profile-info-image img {
+  height: 120px;
+  width: 110px;
+}
+
+.profile-info-basic-highlights {
+  display: flex;
+}
+
+.profile-info-basic {
+  margin-top: -30px;
+  padding-left: 20px;
+}
+
+.profile-info-basic-name {
+  display: flex;
+}
+
+.profile-info-stats {
+  margin-top: -30px;
+  flex: 1;
+  text-align: end;
+}
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 230px;
+  height: 15px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+}

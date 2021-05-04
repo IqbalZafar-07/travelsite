@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import Header from "./components/Header/Header";
+import LeftBar from "./components/LeftBar/LeftBar";
+import Profile from "./components/Profile/Profile";
+import RightBar from "./components/RightBar/RightBar";
+import { profile, journey } from "../src/components/data";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [currentUser, setCurrentUser] = useState("");
+  const [user, setUser] = useState(1);
+  const [journeydata, setJourneydata] = useState("");
+
+  useEffect(() => {
+    user &&
+      profile.map((ele) => {
+        if (user == ele.profileId) {
+          setCurrentUser(ele);
+        }
+      });
+    user &&
+      journey.map((ele) => {
+        console.log(ele.profileId, user);
+        if (ele.profileId == user) setJourneydata(ele);
+      });
+  }, [user]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Profile currentUser={currentUser} />
+      <RightBar currentUser={currentUser} journeydata={journeydata} />
+      <LeftBar
+        currentUser={currentUser}
+        journeydata={journeydata}
+        user={user}
+        setUser={setUser}
+      />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,82 @@
+.rightbar {
+  position: absolute;
+  margin-right: 10vw;
+  right: 0;
+  margin-top: 50px;
+}
+
+.rightbar-nav div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 25px;
+  margin-bottom: -30px;
+  margin-top: -30px;
+}
+
+.rightbar-nav {
+  background-color: #8ab8d4;
+  width: 300px;
+  padding: 20px;
+}
+
+.right-review {
+  background-color: #8ab8d4;
+  width: 340px;
+  margin-top: 20px;
+}
+
+.right-review-detail {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.right-review-detail p {
+  margin-top: 0px;
+  margin-bottom: -1px;
+}
+
+.right-review-overflow {
+  padding-top: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 300px;
+}
+
+.right-review-overflow::-webkit-scrollbar {
+  width: 20px; /* width of the entire scrollbar */
+  border: 2px solid black;
+}
+
+.right-review-overflow::-webkit-scrollbar-track {
+  background: white;
+  border: 3px solid black;
+}
+
+.right-review-overflow::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  outline: 3px solid black;
+  outline-offset: -6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+.right-review-overflow::-webkit-scrollbar-button:single-button {
+  background-color: white;
+  border: 5px solid black;
+  outline: 3px solid black;
+  outline-offset: -3px;
+  height: 15px;
+  width: 15px;
+  display: block;
+}
+.right-review-overflow::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 10px 10px 10px 10px;
+  border-color: transparent transparent black transparent;
+}
+
+.right-review-overflow::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 10px 10px 0px 10px;
+  border-color: black transparent transparent transparent;
+}
