@@ -68,7 +68,8 @@ function LeftBar({ currentUser, journeydata, user, setUser }) {
               <b>{currentUser.name}</b>
             </p>
             <p>
-              Reviewed <b>{journeydata?.journey?.review.attraction}</b>
+              Commented on {journeydata?.journey?.review.attraction}{" "}
+              <b>review</b>
             </p>
           </div>
         </div>
@@ -94,8 +95,7 @@ function LeftBar({ currentUser, journeydata, user, setUser }) {
               <b>{currentUser.name}</b>
             </p>
             <p>
-              Commented on {journeydata?.journey?.review.attraction}{" "}
-              <b>review</b>
+              Recommended <b>{journeydata?.journey?.review.attraction}</b>
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ function LeftBar({ currentUser, journeydata, user, setUser }) {
               <b>{currentUser.name}</b>
             </p>
             <p>
-              Reviewed <b>{journeydata?.journey?.review.attraction}</b>
+              Followed <b>{profile[user == 1 ? 1 : 0].name}</b>
             </p>
           </div>
         </div>
